@@ -18,11 +18,10 @@ view(dados::mtcarros)
 dados = head(mtcarros, 30)
 view(dados)
  
-# 1/ add text with geom_text, use nudge to nudge the text
-ggplot(data, aes(x=wt, y=mpg)) +
+ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
   geom_point() + # Show dots
   geom_text(
-    label=rownames(data), 
+    label = rownames(dados), 
     nudge_x = 0.25, nudge_y = 0.25, 
     check_overlap = T
   )
