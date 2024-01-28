@@ -4,7 +4,7 @@
 ## Baixar pacote
 
 library(dados)
-library(tidyverse)
+library(ggplot2)
 library(ggrepel)
 
 ## Carregar dados
