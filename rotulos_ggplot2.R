@@ -49,4 +49,8 @@ ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
     nudge_x = 0.25, nudge_y = 0.25,
     max.overlaps = 50, segment.colour = "gray",
     fill = "lightblue"
-  ) 
+  ) +
+  labs(x = "Peso", y = "Milhas por galão") +
+  theme_minimal() +
+  theme(text = element_text(size = 12, color = "black"),
+        title = element_text(size = 13))
