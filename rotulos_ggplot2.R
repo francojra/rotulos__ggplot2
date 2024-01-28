@@ -54,3 +54,17 @@ ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
   theme_minimal() +
   theme(text = element_text(size = 12, color = "black"),
         title = element_text(size = 13))
+
+## Adicionando texto uma única informação
+
+ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
+  geom_point() + # Show dots
+  geom_label(
+    label = "Look at this!", 
+    x = 4.1,
+    y = 20,
+    label.padding = unit(0.55, "lines"), # Rectangle size around label
+    label.size = 0.35,
+    color = "black",
+    fill = "#69b3a2"
+  )
