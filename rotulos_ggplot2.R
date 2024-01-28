@@ -8,6 +8,7 @@
 
 library(dados)
 library(tidyverse)
+library(ggrepel)
 
 ## Carregar dados
 
@@ -20,8 +21,16 @@ view(dados)
  
 ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
   geom_point() + # Show dots
-  geom_text(
+  geom_label(
     label = rownames(dados), 
     nudge_x = 0.25, nudge_y = 0.25, 
     check_overlap = T
-  )
+  ) 
+  
+ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
+  geom_point() + # Show dots
+  geom_text_repel(
+    label = rownames(dados), 
+    nudge_x = 0.25, nudge_y = 0.25,
+    max.overlaps = 30
+  ) 
