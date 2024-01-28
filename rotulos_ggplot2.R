@@ -19,7 +19,7 @@ view(dados)
 ## Criar gráfico com geom_text(), geom_label() e geom_text_repel()
 
 ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
-  geom_point() + # Show dots
+  geom_point() + 
   geom_text(
     label = rownames(dados), 
     nudge_x = 0.25, nudge_y = 0.25, 
@@ -27,7 +27,7 @@ ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
   ) 
 
 ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
-  geom_point() + # Show dots
+  geom_point() + 
   geom_text_repel(
     label = rownames(dados), 
     nudge_x = 0.25, nudge_y = 0.25,
@@ -35,7 +35,7 @@ ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
   ) 
 
 ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
-  geom_point() + # Show dots
+  geom_point() +
   geom_label(
     label = rownames(dados), 
     nudge_x = 0.25, nudge_y = 0.25, 
@@ -43,7 +43,7 @@ ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
   ) 
   
 ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
-  geom_point() + # Show dots
+  geom_point() +
   geom_label_repel(
     label = rownames(dados), 
     nudge_x = 0.25, nudge_y = 0.25,
@@ -58,13 +58,13 @@ ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
 ## Adicionando texto uma única informação
 
 ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
-  geom_point() + # Show dots
+  geom_point() + 
   geom_label(
-    label = "Look at this!", 
-    x = 4.1,
-    y = 20,
-    label.padding = unit(0.55, "lines"), # Rectangle size around label
+    label = "R² = - 0,65", 
+    x = 4.7,
+    y = 32,
     label.size = 0.35,
     color = "black",
-    fill = "#69b3a2"
+    fill = "#69b3a2",
+    fontface = "bold"
   )
