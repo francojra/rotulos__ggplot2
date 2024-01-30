@@ -10,16 +10,16 @@ library(dados)
 library(ggplot2)
 library(ggrepel)
 
-## Carregar dados
+# Carregar dados ---------------------------------------------------------------------------------------------------------------------------
 
 view(dados::mtcarros)
 
-## Selecionar as 30 primeiras linhas
+# Selecionar as 30 primeiras linhas --------------------------------------------------------------------------------------------------------
 
 dados = head(mtcarros, 30)
 view(dados)
- 
-## Criar gráfico com geom_text(), geom_label() e geom_text_repel()
+
+# Criar gráfico com geom_text(), geom_label() e geom_text_repel() --------------------------------------------------------------------------
 
 ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
   geom_point() + 
@@ -58,7 +58,7 @@ ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
   theme(text = element_text(size = 12, color = "black"),
         title = element_text(size = 13))
 
-## Adicionando texto uma única informação
+# Adicionando texto uma única informação ---------------------------------------------------------------------------------------------------
 
 ggplot(dados, aes(x = peso, y = milhas_por_galao)) +
   geom_point() + 
