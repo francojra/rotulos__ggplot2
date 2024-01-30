@@ -1,5 +1,9 @@
 # Adicionando rótulos e textos aos gráficos ggplot2
 
+## Autoria do script: Jeanne Franco
+## Data: 27/01/24
+## Referência: https://r-graph-gallery.com/275-add-text-labels-with-ggplot2.html
+
 ### Tópicos
 
 1. Baixar pacote;
